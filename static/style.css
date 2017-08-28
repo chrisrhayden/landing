@@ -1,0 +1,133 @@
+/*
+ * class = bookmarks (a section contaning divs)
+ *         links (ul in bookmarks)
+ *         bookmark-links (a in ul.links)
+ *         bookmark-links-small (a in ul.links)
+ */
+
+
+body {
+    height: 100%;
+    width: 100%;
+    color: white;
+    background-color: black;
+    font-size: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    margin: 10px 0px 25px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header .time-of-day {
+    margin: 0 15px 0 0;
+    font-size: 2em;
+
+}
+
+h1 {
+    font-size: 4em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+/*
+ * main flex layout
+ *
+ * .bookmark-group
+ *    bookmarks
+ *       links drop
+ *          bookmark-links-small
+ *       links side
+ *          bookmark-links-big
+ */
+.bookmark-group {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 40px 25px;
+}
+
+/* div with both small and big links */
+.bookmarks {
+    display: flex;
+    flex-direction: row;
+}
+
+/* each link div */
+.links {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: row;
+}
+
+.drop {
+    display: none;
+}
+
+
+/*
+ * TYPOGRAPHY
+ */
+.bookmarks h3 {
+    font-size: 2em;
+    margin: 0 0 10px 0;
+}
+
+#reddit-h3 {
+    margin-top: 10px;
+}
+
+/* ul and li style */
+.links ul {
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+.bookmark-links-small li {
+    line-height: 22px;
+}
+
+/* link style */
+.links a {
+    text-decoration: none;
+    color: grey;
+}
+
+.links a:hover {
+    color: white;
+}
+
+.bookmark-links-big a {
+    font-size: 2em;
+}
+
+.bookmark-links-small a {
+    font-size: 1em;
+    line-height: 10px;
+    margin: 0 0 5px 0;
+}
+
+
+footer {
+    margin: 10px;
+}
+
+.invert-color {
+    height: 40px;
+    width: 80px;
+    background: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 4px;
+}
