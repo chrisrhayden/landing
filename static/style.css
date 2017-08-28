@@ -5,62 +5,57 @@
  *         bookmark-links-small (a in ul.links)
  */
 
-
 body {
-    height: 100%;
     width: 100%;
-    color: white;
+    height: 100%;
     background-color: black;
+    color: white;
     font-size: 15px;
-    position: relative;
+
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+
+    position: relative;
 }
 
 header {
-    margin: 10px 0px 25px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    margin: 10px 0px 25px 10px;
 }
 
-header .time-of-day {
-    margin: 0 15px 0 0;
-    font-size: 2em;
-
+footer {
+    margin: 10px;
 }
 
-h1 {
-    font-size: 4em;
-    margin: 0;
-}
-
-h2 {
-    font-size: 3em;
-    margin: 0;
-}
 
 /*
  * main flex layout
  *
- * .bookmark-group
+ * .main-page
  *    bookmarks
  *       links drop
  *          bookmark-links-small
  *       links side
  *          bookmark-links-big
  */
+
+.main-page {
+    padding: 0 0 0 10px;
+}
+
 .bookmark-group {
     display: flex;
     flex-direction: column;
     margin: 10px 0 40px 25px;
 }
 
-/* div with both small and big links */
 .bookmarks {
     display: flex;
     flex-direction: row;
+    margin: 0 0 10px 0;
 }
 
 /* each link div */
@@ -74,55 +69,70 @@ h2 {
     display: none;
 }
 
+img {
+    margin: 0 0 0 10px;
+    width: 700px;
+    float: left;
+}
+
 
 /*
+ * typography
+ *
  * TYPOGRAPHY
- */
-.bookmarks h3 {
+ *******************************/
+
+header .time-of-day {
     font-size: 2em;
-    margin: 0 0 10px 0;
+    margin: 0 15px 0 0;
+
 }
 
-#reddit-h3 {
-    margin-top: 10px;
+.header-nav ul {
+    list-style-type: none;
+    font-size: 18px;
 }
 
-/* ul and li style */
+.header-nav a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    font-size: 4em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+h3 {
+    font-size: 2em;
+    margin: 0;
+}
+
+/* link style
+ *******************************/
 .links ul {
     margin: 10px;
     padding: 0;
     list-style: none;
 }
 
-.bookmark-links-small li {
-    line-height: 22px;
-}
-
-/* link style */
 .links a {
-    text-decoration: none;
     color: grey;
+    text-decoration: none;
+    font-size: 2em;
 }
 
 .links a:hover {
     color: white;
 }
 
-.bookmark-links-big a {
-    font-size: 2em;
-}
-
-.bookmark-links-small a {
-    font-size: 1em;
-    line-height: 10px;
-    margin: 0 0 5px 0;
-}
-
-
-footer {
-    margin: 10px;
-}
-
+/* button
+ *******************************/
 .invert-color {
     height: 40px;
     width: 80px;
@@ -130,4 +140,14 @@ footer {
     color: white;
     border: 2px solid white;
     border-radius: 4px;
+}
+
+/* override
+ *******************************/
+.bookmark-links-small a {
+    font-size: 1em;
+}
+
+#reddit-h3 {
+    margin-top: 10px;
 }

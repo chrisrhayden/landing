@@ -19,6 +19,9 @@ function setTime() {
 
 function makeWhite(button) {
     // change page to white version
+    $('.header-nav a').css({
+        'color': 'black'
+    });
     $('body').css({
         'background-color': 'white',
         'color': 'black'
@@ -46,6 +49,9 @@ function makeWhite(button) {
 
 function makeBlack(button) {
     // make page black
+    $('.header-nav a').css({
+        'color': 'white'
+    });
     $('body').css({
         'background-color': 'black',
         'color': 'white'
