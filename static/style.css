@@ -93,10 +93,15 @@ header .time-of-day {
     font-size: 18px;
 }
 
-.header-nav a {
+header a {
     text-decoration: none;
     color: white;
 }
+
+.home-link a {
+    margin: 0;
+}
+
 
 h1 {
     font-size: 4em;

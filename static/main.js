@@ -17,6 +17,7 @@ function setTime() {
 }
 
 
+
 function makeWhite(button) {
     // change page to white version
     $('.header-nav a').css({
